@@ -1,0 +1,18 @@
+<h1> Figures </h1>
+
+
+
+<table border="5">
+  <th>Figure Name</th>
+  <tr>
+    <% @figures.each do |figure| %>
+      <td align="center"><a href="/figures/<%= figure.id %>"><%= figure.name %></a>
+      <ul>
+        <%figure.titles.each do |title|%>
+            <li><%=title.name%></li>
+        <%end%>
+      </ul>
+     </td>
+    </tr> 
+  <% end %>
+</table>
